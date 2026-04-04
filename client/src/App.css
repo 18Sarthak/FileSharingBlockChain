@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 900px;
+  background-color: #0f0f0f;
+}
+
+/* Animated background */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #1a1a1a 50%, #111111 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.6;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+  background-image: linear-gradient(-60deg, #141414 50%, #0a0a0a 50%);
+}
+
+.bg3 {
+  animation-duration: 5s;
+  background-image: linear-gradient(-60deg, #1c1c1c 50%, #101010 50%);
+}
+
+@keyframes slide {
+  0%   { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
+
+/* App container */
+.App {
+  text-align: center;
+  color: #e0e0e0;
+}
+
+/* Headings */
+h1 {
+  font-family: monospace;
+  font-size: 60px;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+}
+
+h3, p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+  color: #aaaaaa;
+}
+
+/* Header section */
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 1px #000;
+  background-image: linear-gradient(135deg, #1a1a1a99 10%, #2a2a2a6b 100%);
+}
+
+/* Content box */
+.content {
+  background-color: rgba(20, 20, 20, 0.85);
+  border: 0.5px solid #2e2e2e;
+  border-radius: 8px;
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Share button */
+.share {
+  padding: 12px 18px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  width: 80px;
+  height: 45px;
+  color: #d0d0d0;
+  border: 0.5px solid #3a3a3a;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  z-index: 1;
+}
+
+.share:hover {
+  background: #252525;
+  border-color: #555555;
+  color: #f0f0f0;
+}
