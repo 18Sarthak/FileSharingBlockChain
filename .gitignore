@@ -7,7 +7,7 @@ typechain-types
 
 # Hardhat files
 cache
-# artifactsgit add -f src/artifacts/
+# artifacts
 
 
 .vercel
